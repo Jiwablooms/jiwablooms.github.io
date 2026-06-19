@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiwa Blooms | Katalog Web</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Pengaturan Dasar */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FDF4F5; /* Warna latar pink pastel lembut */
+            color: #5A4A4D; /* Warna teks cokelat-kemerahan gelap agar tidak kontras */
+        }
+
+        /* Bagian Atas (Hero Section) */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #F5E1E4; /* Garis batas pink pudar */
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #8F7A7E; /* Warna teks deskripsi yang selaras */
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Pengaturan untuk Logo Header */
+        .logo-header {
+            max-width: 250px; /* Lebar maksimal logo, bisa Kakak perbesar/perkecil angkanya */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Memastikan logo berada persis di tengah */
+        }
+
+        /* Bagian Katalog Produk */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #B56576;
+        }
+
+        .katalog-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Kartu Produk */
+        .kartu-produk {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border-bottom: 8px solid #FADADD; /* Aksen garis pink di bawah kartu */
+        }
+
+        .kartu-produk:hover {
+            transform: translateY(-5px);
+        }
+
+        .kartu-produk img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background-color: #eaeaea;
+        }
+
+        .info-produk {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .info-produk h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+            color: #5A4A4D;
+        }
+
+        .info-produk p {
+            font-size: 0.9rem;
+            color: #8F7A7E;
+            margin: 0 0 15px;
+            line-height: 1.5;
+        }
+
+        /* ----- Lingkaran Pilihan Warna ----- */
+        .pilihan-warna {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .lingkaran-warna {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .harga {
+            font-weight: 600;
+            color: #B56576; /* Warna harga disamakan dengan judul */
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Tombol Pesan */
+        .btn-pesan {
+            display: block;
+            text-align: center;
+            background-color: #FADADD; /* Warna Baby Pink */
+            color: #5A4A4D; /* Teks kecokelatan gelap */
+            text-decoration: none;
+            padding: 10px 0;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-pesan:hover {
+            background-color: #F0C9CD; /* Sedikit lebih gelap saat kursor diarahkan */
+        }
+
+        /* Bagian Bawah (Footer) */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #F5E1E4;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #8F7A7E;
+        }
+
+        /* ----- Terms and Conditions Section ----- */
+        .tnc-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px auto;
+            max-width: 940px; /* Disesuaikan dengan lebar container */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+            border-top: 6px solid #B56576; /* Garis tegas di atas untuk penekanan */
+            text-align: left;
+        }
+
+        .tnc-section h2 {
+            text-align: center;
+            color: #B56576;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .tnc-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+            color: #8F7A7E;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .tnc-list li {
+            margin-bottom: 12px;
+        }
+
+        .tnc-list strong {
+            color: #5A4A4D; /* Warna tebal agar poin utama terbaca jelas */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="LogoJiwablooms.png" alt="Logo Jiwa Blooms" class="logo-header">
+        <p>"Your companion on your special day."</p>
+    </header>
+
+    <div class="container">
+        <h2>Katalog Spesial Kami</h2>
+        
+        <div class="katalog-grid">
+            <div class="kartu-produk">
+                <img src="Catalog Box Kubah (P).jpg" alt="Papan Akrilik Dome">
+                <div class="info-produk">
+                    <h3>Dome Series</h3>
+                    <p>Bentuk kubah melengkung di bagian atas yang simpel, manis, dan elegan. Sentuhan sederhana namun mampu memberikan kesan mendalam.</p>
+                    
+                    <div class="pilihan-warna">
+                        <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
+                        <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
+                        <span class="lingkaran-warna" style="background-color: #FFB6C1;" title="Pink"></span>
+                        <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
+                        <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
+                    </div>
+
+                    <span class="harga">Mulai dari Rp 35.000</span>
+                    <a href="detail-dome.html" class="btn-pesan">Lihat Detail</a>
+                </div>
+            </div>
+
+            <div class="kartu-produk">
+                <img src="Catalog Bulat (P).jpg" alt="Papan Akrilik Round">
+                <div class="info-produk">
+                    <h3>Round Series</h3>
+                    <p>Desain papan bunga membulat klasik yang elegan. Pilihan aman dan cantik untuk merayakan berbagai momen kelulusan maupun selebrasi.</p>
+                    
+                    <div class="pilihan-warna">
+                        <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
+                        <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
+                        <span class="lingkaran-warna" style="background-color: #FFB6C1;" title="Pink"></span>
+                        <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
+                        <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
+                    </div>
+
+                    <span class="harga">Mulai dari Rp 39.000</span>
+                    <a href="detail-round.html" class="btn-pesan">Lihat Detail</a>
+                </div>
+            </div>
+
+            <div class="kartu-produk">
+                <img src="gambar/crescent.jpg" alt="Papan Akrilik Crescent">
+                <div class="info-produk">
+                    <h3>Crescent</h3>
+                    <p>Bentuk bulan sabit ramping yang memberikan kesan modern, minimalis, dan estetik. Pilihan tepat untuk kado manis di hari spesial.</p>
+                    
+                    <div class="pilihan-warna">
+                        <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
+                        <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
+                        <span class="lingkaran-warna" style="background-color: #FFB6C1;" title="Pink"></span>
+                        <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
+                        <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
+                    </div>
+
+                    <span class="harga">Mulai dari Rp 39.000</span>
+                    <a href="detail-crescent.html" class="btn-pesan">Lihat Detail</a>
+                </div>
+            </div>
+
+            <div class="kartu-produk">
+                <img src="gambar/moon.jpg" alt="Papan Akrilik Moon">
+                <div class="info-produk">
+                    <h3>Moon Series</h3>
+                    <p>Desain bulan sabit penuh yang menawan dan berkarakter. Tampilan cantik dengan kebebasan memilih palet warna bunga favoritmu.</p>
+                    
+                    <div class="pilihan-warna">
+                        <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
+                        <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
+                        <span class="lingkaran-warna" style="background-color: #FFB6C1;" title="Pink"></span>
+                        <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
+                        <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
+                    </div>
+
+                    <span class="harga">Mulai dari Rp 42.000</span>
+                    <a href="detail-moon.html" class="btn-pesan">Lihat Detail</a>
+                </div>
+            </div>
+            
+            <div class="kartu-produk">
+                <img src="Catalog Box Kotak (P).jpg" alt="Papan Akrilik Box">
+                <div class="info-produk">
+                    <h3>Box Series</h3>
+                    <p>Desain kotak yang tegas namun tetap manis. Memberikan ruang penulisan yang lebih luas untuk merangkai pesan hangat dan ucapan selamat.</p>
+                    
+                    <div class="pilihan-warna">
+                        <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
+                        <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
+                        <span class="lingkaran-warna" style="background-color: #FFB6C1;" title="Pink"></span>
+                        <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
+                        <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
+                    </div>
+
+                    <span class="harga">Mulai dari Rp 43.000</span>
+                    <a href="detail-box.html" class="btn-pesan">Lihat Detail</a>
+                </div>
+            </div>
+
+            <div class="kartu-produk">
+                <img src="Catalog Bulat Holo (P).jpg" alt="Papan Akrilik Holo Circle">
+                <div class="info-produk">
+                    <h3>Holo Circle Wave</h3>
+                    <p>Bentuk lingkaran dengan sentuhan gelombang dan lubang tengah (hollow) yang artistik. Tampil beda, sangat eye-catching, dan kekinian.</p>
+                    
+                    <div class="pilihan-warna">
+                        <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
+                        <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
+                        <span class="lingkaran-warna" style="background-color: #FFB6C1;" title="Pink"></span>
+                        <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
+                        <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
+                    </div>
+
+                    <span class="harga">Mulai dari Rp 47.000</span>
+                    <a href="detail-holo.html" class="btn-pesan">Lihat Detail</a>
+                </div>
+            </div>
+
+            <div class="kartu-produk">
+                <img src="gambar/bigwave.jpg" alt="Papan Akrilik Big Wave">
+                <div class="info-produk">
+                    <h3>Big Wave</h3>
+                    <p>Desain gelombang asimetris besar yang dinamis. Menggunakan material HMR kokoh yang memberikan kesan mewah dan premium untuk acara penting.</p>
+                    
+                    <div class="pilihan-warna">
+                        <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
+                        <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
+                        <span class="lingkaran-warna" style="background-color: #FFB6C1;" title="Pink"></span>
+                        <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
+                        <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
+                    </div>
+
+                    <span class="harga">Mulai dari Rp 60.000</span>
+                    <a href="detail-bigwave.html" class="btn-pesan">Lihat Detail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TERMS AND CONDITIONS SECTION -->
+    <div class="tnc-section">
+        <h2>Terms & Conditions</h2>
+        <ol class="tnc-list">
+            <li><strong>Waktu Pemesanan:</strong> Pemesanan ideal dilakukan maksimal H-1 pukul 17.00 WIB sebelum tanggal pengiriman untuk memastikan ketersediaan warna bunga dan papan.</li>
+            <li><strong>Sistem Pembayaran:</strong> Pembayaran muka / DP dilakukan maksimal H-1 Sebelum tanggal pengiriman dan Pelusanan maksimal Hari-H pengiriman.</li>
+            <li><strong>Revisi Desain:</strong> Pelanggan berhak melakukan revisi draft tulisan atau priview desain sebelum proses pencetakan.</li>
+            <li><strong>Kebijakan Pembatalan:</strong> Pembatalan sepihak oleh pelanggan pada H-1 atau di hari pengiriman tanpa alasan yang jelas akan mengakibatkan uang muka (DP) hangus.</li>
+            <li><strong>Pengiriman & Risiko:</strong> Kami memastikan produk sampai dengan sangat aman. Kerusakan yang terjadi selama jam penyewaan, di luar tanggung jawab tim Jiwablooms.</li>
+        </ol>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jiwa Blooms. Crafted by Admin_Jiwablooms.</p>
+    </footer>
+
+</body>
+</html>

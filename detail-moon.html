@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk | Moon Series</title>
+    
+    <!-- Mengambil font elegan dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* TEMA WARNA: Dusty Rose Harmony */
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #FDF4F5; color: #5A4A4D; }
+        
+        header { text-align: center; padding: 30px 20px; background-color: #fff; border-bottom: 1px solid #F5E1E4; }
+        header h1 { font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: #B56576; margin: 0; }
+        
+        .container { max-width: 800px; margin: 40px auto; padding: 30px; background-color: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.03); }
+        
+        /* Tombol Kembali */
+        .btn-kembali { display: inline-block; margin-bottom: 20px; color: #B56576; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+        .btn-kembali:hover { color: #8F7A7E; }
+
+        /* Info Utama Produk */
+        .produk-header { text-align: center; margin-bottom: 40px; }
+        .produk-header img { width: 100%; max-width: 400px; border-radius: 12px; margin-bottom: 20px; border-bottom: 8px solid #FADADD; box-sizing: border-box; }
+        .produk-header h2 { margin: 0 0 10px; color: #B56576; font-size: 1.8rem; }
+        .produk-header p { color: #8F7A7E; line-height: 1.6; max-width: 600px; margin: 0 auto 15px; }
+        
+        .harga { font-size: 1.5rem; color: #B56576; font-weight: 600; display: block; margin-top: 15px; }
+
+        /* Galeri Varian Warna */
+        .varian-section { margin-top: 40px; border-top: 1px solid #F5E1E4; padding-top: 30px; }
+        .varian-section h3 { text-align: center; margin-bottom: 25px; color: #B56576; font-size: 1.4rem; }
+        
+        .galeri-varian { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        
+        .kartu-varian { text-align: center; width: 150px; }
+        .kartu-varian img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid #F5E1E4; transition: transform 0.3s, border-color 0.3s; }
+        .kartu-varian img:hover { transform: scale(1.05); border-color: #FADADD; cursor: pointer; }
+        .kartu-varian p { margin: 10px 0 0; font-size: 0.95rem; font-weight: 600; color: #5A4A4D; }
+
+        /* Tombol Pesan Utama */
+        .btn-pesan-sekarang { display: block; width: 100%; max-width: 300px; margin: 50px auto 10px; text-align: center; background-color: #FADADD; color: #5A4A4D; text-decoration: none; padding: 12px 0; border-radius: 6px; font-weight: 600; font-size: 1.1rem; transition: background 0.3s; }
+        .btn-pesan-sekarang:hover { background-color: #F0C9CD; }
+        
+        /* Footer */
+        footer { text-align: center; padding: 20px; border-top: 1px solid #F5E1E4; margin-top: 40px; font-size: 0.9rem; color: #8F7A7E; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jiwa Blooms</h1>
+    </header>
+
+    <div class="container">
+        <!-- Tombol kembali ke halaman index.html -->
+        <a href="index.html" class="btn-kembali">&larr; Kembali ke Katalog Utama</a>
+        
+        <!-- Bagian Foto dan Deskripsi Produk -->
+        <div class="produk-header">
+            <!-- Pastikan nama file gambar moon utama Kakak sesuai (misal: moon.jpg) -->
+            <img src="gambar/moon.jpg" alt="Papan Akrilik Moon">
+            <h2>Moon Series</h2>
+            <p>Desain bulan sabit penuh yang menawan dan berkarakter. Tampilan cantik dengan kebebasan memilih palet warna bunga favoritmu. Dirangkai khusus untuk menyampaikan pesan hangat di hari spesial.</p>
+            <span class="harga">Rp 42.000</span>
+        </div>
+
+        <!-- Bagian Galeri Varian Warna -->
+        <div class="varian-section">
+            <h3>Galeri Pilihan Warna</h3>
+            <div class="galeri-varian">
+                <!-- Varian 1 -->
+                <div class="kartu-varian">
+                    <img src="gambar/moon-biru.jpg" alt="Moon Biru">
+                    <p>Biru Pastel</p>
+                </div>
+                <!-- Varian 2 -->
+                <div class="kartu-varian">
+                    <img src="gambar/moon-pink.jpg" alt="Moon Pink">
+                    <p>Soft Pink</p>
+                </div>
+                <!-- Varian 3 -->
+                <div class="kartu-varian">
+                    <img src="gambar/moon-maroon.jpg" alt="Moon Maroon">
+                    <p>Maroon</p>
+                </div>
+                <!-- Varian 4 -->
+                <div class="kartu-varian">
+                    <img src="gambar/moon-mix.jpg" alt="Moon Mix">
+                    <p>Mix Color</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tombol WhatsApp (Bisa Kakak ganti dengan link wa.me nantinya) -->
+        <a href="#" class="btn-pesan-sekarang">Pesan Sekarang (WhatsApp)</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jiwa Blooms. Crafted by Admin_Jiwablooms.</p>
+    </footer>
+
+</body>
+</html>

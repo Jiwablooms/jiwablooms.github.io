@@ -39,6 +39,51 @@
         /* Tombol Pesan Utama */
         .btn-pesan-sekarang { display: block; width: 100%; max-width: 300px; margin: 40px auto 10px; text-align: center; background-color: #FADADD; color: #5A4A4D; text-decoration: none; padding: 12px 0; border-radius: 6px; font-weight: 600; font-size: 1.1rem; transition: background 0.3s; }
         .btn-pesan-sekarang:hover { background-color: #F0C9CD; }
+
+        /* Mengatur agar teks dan lingkaran sejajar di tengah */
+        .pilihan-warna-papan {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px; /* Jarak antara teks "Pilihan Warna Papan" dan lingkaran */
+            margin-top: 15px;
+            margin-bottom: 20px; /* Jarak ke teks Harga di bawahnya */
+        }
+
+        /* Mengatur gaya tulisan */
+        .label-warna {
+            font-weight: 600;
+            font-size: 16px;
+            color: #a76d7a; /* Mengikuti tema warna Dusty Rose */
+        }
+
+        /* Mengatur agar ketiga lingkaran saling berjejer */
+        .warna-swatches {
+            display: flex;
+            gap: 8px; /* Jarak antar lingkaran warna */
+        }
+
+        /* Membentuk kotak menjadi lingkaran sempurna */
+        .swatch {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 1px solid #ccc; /* Garis tepi tipis agar warna putih tidak menyatu dengan background */
+            display: inline-block;
+        }
+
+        /* Memberikan warna pada masing-masing lingkaran (bisa disesuaikan kode warnanya) */
+        .swatch.putih {
+            background-color: #ffffff;
+        }
+
+        .swatch.biru {
+            background-color: #67b3e7; /* Biru soft/pastel */
+        }
+
+        .swatch.pink {
+            background-color: #f083a9; /* Pink soft/pastel */
+        }
     </style>
 </head>
 <body>

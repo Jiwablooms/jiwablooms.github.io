@@ -13,8 +13,8 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #FDF4F5; /* Warna latar pink pastel lembut */
-            color: #5A4A4D; /* Warna teks cokelat-kemerahan gelap agar tidak kontras */
+            background-color: #FDF4F5;
+            color: #5A4A4D;
         }
 
         /* Bagian Atas (Hero Section) */
@@ -22,38 +22,37 @@
             text-align: center;
             padding: 60px 20px;
             background-color: #fff;
-            border-bottom: 1px solid #F5E1E4; /* Garis batas pink pudar */
+            border-bottom: 1px solid #F5E1E4;
         }
 
         header p {
             font-size: 1.1rem;
-            color: #8F7A7E; /* Warna teks deskripsi yang selaras */
+            color: #8F7A7E;
             margin-top: 10px;
             font-style: italic;
         }
 
-        /* Pengaturan untuk Logo Header */
         .logo-header {
             max-width: 250px; 
             height: auto;
             display: block;
-            margin: 0 auto; /* Memastikan logo berada persis di tengah */
+            margin: 0 auto;
         }
 
-        /* --- Tampilan Tombol Kategori Minimalis --- */
+        /* --- Tampilan Tombol Kategori --- */
         .kategori-tab-container {
             display: flex;
             justify-content: center;
-            gap: 40px; /* Jarak antar teks lebih lega */
+            gap: 40px;
             margin: 20px auto 40px; 
             max-width: 400px;
-            border-bottom: 2px solid #F5E1E4; /* Garis tipis halus sebagai alas */
+            border-bottom: 2px solid #F5E1E4;
         }
 
         .tab-button {
             background-color: transparent;
-            border: none; /* Hilangkan bingkai kotak/pil */
-            color: #8F7A7E; /* Warna teks tidak aktif (agak pudar) */
+            border: none;
+            color: #8F7A7E;
             padding: 10px 5px;
             font-size: 1.1rem;
             font-family: 'Poppins', sans-serif;
@@ -63,39 +62,35 @@
             transition: color 0.3s ease;
         }
 
-        /* Teks berubah warna saat disentuh atau aktif */
         .tab-button:hover, .tab-button.active {
             color: #B56576; 
         }
 
-        /* --- Animasi Garis Bawah Simple --- */
         .tab-button::after {
             content: '';
             position: absolute;
-            width: 0; /* Awalnya garis tidak terlihat */
-            height: 3px; /* Ketebalan garis aksen */
-            bottom: -2px; /* Menempel pas di atas garis alas container */
+            width: 0;
+            height: 3px;
+            bottom: -2px;
             left: 50%;
             background-color: #B56576;
-            transition: all 0.3s ease; /* Animasi mulus */
+            transition: all 0.3s ease;
             transform: translateX(-50%);
             border-radius: 3px;
         }
 
-        /* Garis memanjang dari tengah ke samping saat tombol aktif */
         .tab-button.active::after {
             width: 100%;
         }
 
         /* --- Tampilan Konten Tab --- */
         .tab-content {
-            display: none; /* Sembunyikan semua konten secara default */
+            display: none;
             animation: fadeEffect 0.5s;
         }
 
-        /* Pastikan menggunakan kata 'active' dengan huruf C */
         .tab-content.active {
-            display: block; /* Hanya munculkan jika ada class active */
+            display: block;
         }
 
         @keyframes fadeEffect {
@@ -103,23 +98,22 @@
             to { opacity: 1; }
         }
 
-        /* --- Tampilan Grid Galeri Foto Customer --- */
+        /* --- Grid & Kartu --- */
         .galeri-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsif menyesuaikan layar HP/Laptop */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
             padding: 20px 0;
         }
 
         .galeri-grid img {
             width: 100%;
-            height: 200px; /* Seragamkan tinggi foto */
-            border-radius: 15px; /* Ujung foto agak membulat */
-            object-fit: cover; /* Agar foto tidak gepeng */
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        /* Bagian Katalog Produk */
         .container {
             max-width: 1000px;
             margin: 40px auto;
@@ -140,7 +134,6 @@
             justify-content: center;
         }
 
-        /* Kartu Produk */
         .kartu-produk {
             background-color: #fff;
             border-radius: 12px;
@@ -148,7 +141,7 @@
             width: 300px;
             overflow: hidden;
             transition: transform 0.3s;
-            border-bottom: 8px solid #FADADD; /* Aksen garis pink di bawah kartu */
+            border-bottom: 8px solid #FADADD;
         }
 
         .kartu-produk:hover {
@@ -180,7 +173,7 @@
             line-height: 1.5;
         }
 
-        /* ----- Pilihan Opsi Angka (Custom Font) ----- */
+        /* --- Opsi Custom --- */
         .pilihan-opsi {
             display: flex;
             gap: 8px;
@@ -204,19 +197,12 @@
             transition: all 0.3s;
         }
 
-        .opsi-angka:hover {
-            background-color: #B56576;
-            color: #fff;
-        }
-
-        /* Efek saat angka sedang dipilih */
-        .opsi-angka.aktif {
+        .opsi-angka:hover, .opsi-angka.aktif {
             background-color: #B56576;
             color: #fff;
             box-shadow: 0 2px 4px rgba(181, 101, 118, 0.3);
         }
 
-        /* ----- Lingkaran Pilihan Warna ----- */
         .pilihan-warna {
             display: flex;
             gap: 8px;
@@ -233,29 +219,25 @@
             transition: transform 0.2s, border 0.2s;
         }
 
-        .lingkaran-warna:hover {
-            transform: scale(1.2);
-        }
-
-        .lingkaran-warna.aktif {
+        .lingkaran-warna:hover, .lingkaran-warna.aktif {
             border: 3px solid #B56576;
             transform: scale(1.2);
         }
 
         .harga {
             font-weight: 600;
-            color: #B56576; /* Warna harga disamakan dengan judul */
+            color: #B56576;
             font-size: 1.1rem;
             margin-bottom: 15px;
             display: block;
         }
 
-        /* Tombol Pesan Katalog Biasa */
+        /* --- Tombol Interaktif --- */
         .btn-pesan {
             display: block;
             text-align: center;
-            background-color: #FADADD; /* Warna Baby Pink */
-            color: #5A4A4D; /* Teks kecokelatan gelap */
+            background-color: #FADADD;
+            color: #5A4A4D;
             text-decoration: none;
             padding: 10px 0;
             border-radius: 6px;
@@ -264,13 +246,12 @@
         }
 
         .btn-pesan:hover {
-            background-color: #F0C9CD; /* Sedikit lebih gelap saat kursor diarahkan */
+            background-color: #F0C9CD;
         }
 
-        /* Tombol Kirim ke WA untuk Custom Design & Galeri */
         .btn-wa-custom {
             display: inline-block;
-            background-color: #25D366; /* Warna Hijau Khas WhatsApp */
+            background-color: #25D366;
             color: white;
             padding: 15px 30px;
             border-radius: 30px;
@@ -290,26 +271,15 @@
             transform: translateY(-3px);
         }
 
-        /* Bagian Bawah (Footer) */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            border-top: 1px solid #F5E1E4;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: #8F7A7E;
-        }
-
-        /* ----- Terms and Conditions Section ----- */
+        /* --- TNC & Footer --- */
         .tnc-section {
             background-color: #fff;
             padding: 30px;
             border-radius: 12px;
             margin: 40px auto;
-            max-width: 940px; /* Disesuaikan dengan lebar container */
+            max-width: 940px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.03);
-            border-top: 6px solid #B56576; /* Garis tegas di atas untuk penekanan */
+            border-top: 6px solid #B56576;
             text-align: left;
         }
 
@@ -329,12 +299,17 @@
             font-size: 0.95rem;
         }
 
-        .tnc-list li {
-            margin-bottom: 12px;
-        }
+        .tnc-list li { margin-bottom: 12px; }
+        .tnc-list strong { color: #5A4A4D; }
 
-        .tnc-list strong {
-            color: #5A4A4D; /* Warna tebal agar poin utama terbaca jelas */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #F5E1E4;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #8F7A7E;
         }
     </style>
 </head>
@@ -346,7 +321,6 @@
     </header>
 
     <div class="kategori-tab-container">
-        <!-- Tombol navigasi menu atas -->
         <button class="tab-button active" onclick="bukaTab('katalog', this)">Katalog</button>
         <button class="tab-button" onclick="bukaTab('custom', this)">Custom Design</button>
         <button class="tab-button" onclick="bukaTab('galeri', this)">Galeri Kinyis Kinyis</button>
@@ -362,8 +336,7 @@
                     <img src="Gambar/Catalog Box Kubah (P).jpg" alt="Papan Akrilik Dome">
                     <div class="info-produk">
                         <h3>Dome Series</h3>
-                        <p>Bingkai 3D berbentuk kubah di bagian atas, dan Rangkaian bunga memberikan efek dimensi yang elegan, eksklusif, dan mewah.</p>
-                        
+                        <p>Bingkai 3D berbentuk kotak dengan potongan jendela melengkung (kubah) di bagian atas. Rangkaian bunganya memberikan efek dimensi yang elegan, eksklusif, dan mewah.</p>
                         <div class="pilihan-warna">
                             <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
                             <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
@@ -371,7 +344,6 @@
                             <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
                             <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
                         </div>
-
                         <span class="harga">Mulai dari Rp 35.000</span>
                         <a href="detail-dome.html" class="btn-pesan">Lihat Detail</a>
                     </div>
@@ -381,8 +353,7 @@
                     <img src="Gambar/Catalog Bulat (P).jpg" alt="Papan Akrilik Round">
                     <div class="info-produk">
                         <h3>Round Series</h3>
-                        <p>Desain papan bunga membulat klasik yang elegan. Pilihan aman dan cantik untuk merayakan berbagai momen kelulusan maupun selebrasi.</p>
-                        
+                        <p>Papan lingkaran datar (flat) bergaya klasik yang tak lekang oleh waktu. Menampilkan rangkaian bunga asimetris yang menawan di tepiannya, sangat pas untuk berbagai momen selebrasi.</p>
                         <div class="pilihan-warna">
                             <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
                             <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
@@ -390,7 +361,6 @@
                             <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
                             <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
                         </div>
-
                         <span class="harga">Mulai dari Rp 39.000</span>
                         <a href="detail-round.html" class="btn-pesan">Lihat Detail</a>
                     </div>
@@ -400,8 +370,7 @@
                     <img src="Gambar/Catalog Crescent Utama (P).jpeg" alt="Papan Akrilik Crescent">
                     <div class="info-produk">
                         <h3>Crescent</h3>
-                        <p>Desain papan bunga membulat klasik yang elegan. Pilihan aman dan cantik untuk merayakan berbagai momen kelulusan maupun selebrasi.</p>
-                        
+                        <p>Papan lingkaran penuh dengan penempatan bunga tebal yang melengkung membentuk siluet bulan sabit (crescent). Memberikan ilusi bentuk yang estetik, penuh, dan sangat manis.</p>
                         <div class="pilihan-warna">
                             <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
                             <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
@@ -409,7 +378,6 @@
                             <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
                             <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
                         </div>
-
                         <span class="harga">Mulai dari Rp 39.000</span>
                         <a href="detail-crescent.html" class="btn-pesan">Lihat Detail</a>
                     </div>
@@ -419,8 +387,7 @@
                     <img src="Gambar/Catalog Utama Moon (PB).jpeg" alt="Papan Akrilik Moon">
                     <div class="info-produk">
                         <h3>Moon Series</h3>
-                        <p>Desain bulan sabit yang menawan dan berkarakter. Tampilan cantik dengan kebebasan memilih palet warna bunga favoritmu.</p>
-                        
+                        <p>Tampil memukau dengan papan bundar berlatar efek hologram yang bersinar cantik. Rangkaian bunga yang melintang horizontal memberikan sentuhan magis dan sangat eye-catching.</p>
                         <div class="pilihan-warna">
                             <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
                             <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
@@ -428,7 +395,6 @@
                             <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
                             <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
                         </div>
-
                         <span class="harga">Mulai dari Rp 42.000</span>
                         <a href="detail-moon.html" class="btn-pesan">Lihat Detail</a>
                     </div>
@@ -438,8 +404,7 @@
                     <img src="Gambar/Catalog Box Kotak (P).jpg" alt="Papan Akrilik Box">
                     <div class="info-produk">
                         <h3>Box Series</h3>
-                        <p>Desain kotak yang tegas namun tetap manis. Memberikan ruang penulisan yang lebih luas untuk merangkai pesan hangat dan ucapan selamat.</p>
-                        
+                        <p>Bingkai 3D berbentuk persegi panjang (box frame) yang tegas namun elegan. Memberikan ilusi bunga yang mekar dari dalam bingkai, serta menyediakan ruang tulis yang luas.</p>
                         <div class="pilihan-warna">
                             <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
                             <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
@@ -447,7 +412,6 @@
                             <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
                             <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
                         </div>
-
                         <span class="harga">Mulai dari Rp 43.000</span>
                         <a href="detail-box.html" class="btn-pesan">Lihat Detail</a>
                     </div>
@@ -456,9 +420,8 @@
                 <div class="kartu-produk">
                     <img src="Gambar/Catalog Bulat Holo (P).jpg" alt="Papan Akrilik Holo Circle">
                     <div class="info-produk">
-                        <h3>Holo Circle Wave</h3>
-                        <p>Bentuk lingkaran dengan sentuhan hologram dan crack egg yang artistik. Tampil beda, sangat eye-catching, dan kekinian.</p>
-                        
+                        <h3>Hollow Circle</h3>
+                        <p>Desain bingkai lingkaran 3D dengan cekungan di bagian tengah (hollow). Memberikan efek kedalaman visual yang artistik, membingkai ucapanmu dengan sangat memesona.</p>
                         <div class="pilihan-warna">
                             <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
                             <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
@@ -466,7 +429,6 @@
                             <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
                             <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
                         </div>
-
                         <span class="harga">Mulai dari Rp 47.000</span>
                         <a href="detail-holo.html" class="btn-pesan">Lihat Detail</a>
                     </div>
@@ -476,8 +438,7 @@
                     <img src="Gambar/Catalog Utama Big Wave.jpeg" alt="Papan Akrilik Big Wave">
                     <div class="info-produk">
                         <h3>Big Wave</h3>
-                        <p>Papan persegi panjang dengan gelombang simetris besar yang dinamis. Menggunakan material HMR kokoh yang memberikan kesan mewah dan premium untuk acara penting.</p>
-                        
+                        <p>Papan mendatar dengan aksen potongan gelombang (wave) yang dinamis di tepi atas. Model yang lebar dan premium, cocok untuk memuat ucapan yang lebih panjang.</p>
                         <div class="pilihan-warna">
                             <span class="lingkaran-warna" style="background-color: #AEC6CF;" title="Biru Muda"></span>
                             <span class="lingkaran-warna" style="background-color: #34568B;" title="Biru Tua"></span>
@@ -485,7 +446,6 @@
                             <span class="lingkaran-warna" style="background-color: #800000;" title="Maroon"></span>
                             <span class="lingkaran-warna" style="background-color: #DDA0DD;" title="Ungu"></span>
                         </div>
-
                         <span class="harga">Mulai dari Rp 60.000</span>
                         <a href="detail-bigwave.html" class="btn-pesan">Lihat Detail</a>
                     </div>
@@ -493,7 +453,7 @@
             </div>
         </div>
 
-        <!-- === TAB 2: CUSTOM DESIGN (Dilengkapi Fitur Klik Gambar & WA) === -->
+        <!-- === TAB 2: CUSTOM DESIGN === -->
         <div id="custom" class="tab-content">
             <h2>Custom Colors, Font & Elemen</h2>
             <p style="color: #8F7A7E; margin-bottom: 30px;">Pilih gaya tulisan dan ornamen pada papan ucapanmu.</p>
@@ -501,84 +461,89 @@
             <!-- Pilihan Warna Font -->
             <div style="text-align: center; margin-bottom: 40px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.03);">
                 <h3 style="color: #5A4A4D; font-size: 1.2rem; margin-bottom: 15px;">Custom Font Colours</h3>
+                
+                <!-- PERUBAHAN FUNGSI ONCLICK DI SINI -->
                 <div class="pilihan-warna" id="opsi-warna-font" style="justify-content: center; gap: 15px;">
-                    <span class="lingkaran-warna aktif" style="background-color: #000000; width: 30px; height: 30px;" onclick="pilihWarna(this, 'Hitam')" title="Hitam"></span>
-                    <span class="lingkaran-warna" style="background-color: #37a2dd; width: 30px; height: 30px;" onclick="pilihWarna(this, 'Biru (#37a2dd)')" title="Biru (#37a2dd)"></span>
-                    <span class="lingkaran-warna" style="background-color: #ffa6d3; width: 30px; height: 30px;" onclick="pilihWarna(this, 'Pink (#ffa6d3)')" title="Pink (#ffa6d3)"></span>
-                    <span class="lingkaran-warna" style="background-color: #ff3131; width: 30px; height: 30px;" onclick="pilihWarna(this, 'Merah (#ff3131)')" title="Merah (#ff3131)"></span>
+                    <span class="lingkaran-warna aktif" style="background-color: #000000; width: 30px; height: 30px;" onclick="pilihWarna(this, 'Hitam', 'Hitam')" title="Hitam"></span>
+                    <span class="lingkaran-warna" style="background-color: #37a2dd; width: 30px; height: 30px;" onclick="pilihWarna(this, 'Biru (#37a2dd)', 'Biru')" title="Biru (#37a2dd)"></span>
+                    <span class="lingkaran-warna" style="background-color: #ffa6d3; width: 30px; height: 30px;" onclick="pilihWarna(this, 'Pink (#ffa6d3)', 'Pink')" title="Pink (#ffa6d3)"></span>
+                    <span class="lingkaran-warna" style="background-color: #ff3131; width: 30px; height: 30px;" onclick="pilihWarna(this, 'Merah (#ff3131)', 'Merah')" title="Merah (#ff3131)"></span>
                 </div>
             </div>
 
             <div class="katalog-grid">
+                
                 <!-- Kartu Font Congratulations -->
                 <div class="kartu-produk">
-                    <img src="Custom/Congrats/1.jpg" alt="Pilihan Font Congratulations">
+                    <!-- Default saat web pertama dibuka adalah gambar "Hitam-1.jpg" -->
+                    <img id="img-Congrats" src="Custom/Congrats/Hitam-1.png" alt="Pilihan Font Congratulations">
                     <div class="info-produk">
                         <h3>Congratulations</h3>
                         <div class="pilihan-opsi">
-                            <span class="opsi-angka aktif" onclick="gantiPreview(this, 'Custom/Congrats/1.jpg')">1</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Congrats/2.jpg')">2</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Congrats/3.jpg')">3</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Congrats/4.jpg')">4</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Congrats/5.jpg')">5</span>
+                            <span class="opsi-angka aktif" onclick="gantiPreviewDinamis(this, 'Congrats', 1)">1</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Congrats', 2)">2</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Congrats', 3)">3</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Congrats', 4)">4</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Congrats', 5)">5</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Kartu Font Unofficially -->
                 <div class="kartu-produk">
-                    <img src="Custom/Unof/1.jpg" alt="Pilihan Font Unofficially">
+                    <img id="img-Unof" src="Custom/Unof/Hitam-1.png" alt="Pilihan Font Unofficially">
                     <div class="info-produk">
                         <h3>Unofficially</h3>
                         <div class="pilihan-opsi">
-                            <span class="opsi-angka aktif" onclick="gantiPreview(this, 'Custom/Unof/1.jpg')">1</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Unof/2.jpg')">2</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Unof/3.jpg')">3</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Unof/4.jpg')">4</span>
+                            <span class="opsi-angka aktif" onclick="gantiPreviewDinamis(this, 'Unof', 1)">1</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Unof', 2)">2</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Unof', 3)">3</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Unof', 4)">4</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Kartu Font Nama dan Gelar -->
                 <div class="kartu-produk">
-                    <img src="Custom/Nama/1.jpg" alt="Pilihan Font Nama dan Gelar">
+                    <img id="img-Nama" src="Custom/Nama/Hitam-1.png" alt="Pilihan Font Nama dan Gelar">
                     <div class="info-produk">
                         <h3>Nama dan Gelar</h3>
                         <div class="pilihan-opsi">
-                            <span class="opsi-angka aktif" onclick="gantiPreview(this, 'Custom/Nama/1.jpg')">1</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Nama/2.jpg')">2</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Nama/3.jpg')">3</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Nama/4.jpg')">4</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Nama/5.jpg')">5</span>
+                            <span class="opsi-angka aktif" onclick="gantiPreviewDinamis(this, 'Nama', 1)">1</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Nama', 2)">2</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Nama', 3)">3</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Nama', 4)">4</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Nama', 5)">5</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Kartu Font From -->
                 <div class="kartu-produk">
-                    <img src="Custom/From/1.jpg" alt="Pilihan Font From">
+                    <img id="img-From" src="Custom/From/Hitam-1.png" alt="Pilihan Font From">
                     <div class="info-produk">
                         <h3>From</h3>
                         <div class="pilihan-opsi">
-                            <span class="opsi-angka aktif" onclick="gantiPreview(this, 'Custom/From/1.jpg')">1</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/From/2.jpg')">2</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/From/3.jpg')">3</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/From/4.jpg')">4</span>
+                            <span class="opsi-angka aktif" onclick="gantiPreviewDinamis(this, 'From', 1)">1</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'From', 2)">2</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'From', 3)">3</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'From', 4)">4</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Kartu Custom Element -->
+                <!-- Kartu Custom Element (DIKECUALIKAN DARI WARNA) -->
                 <div class="kartu-produk">
-                    <img src="Custom/Element/1.jpg" alt="Pilihan Custom Element">
+                    <!-- Penamaan gambar element tetap menggunakan angka biasa -->
+                    <img id="img-Element" src="Custom/Element/1.jpg" alt="Pilihan Custom Element">
                     <div class="info-produk">
                         <h3>Custom Element</h3>
                         <p style="font-size: 0.9rem; color: #8F7A7E; margin-bottom: 10px;">Pilih ornamen tambahan favoritmu.</p>
                         <div class="pilihan-opsi">
-                            <span class="opsi-angka aktif" onclick="gantiPreview(this, 'Custom/Element/1.jpg')">1</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Element/2.jpg')">2</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Element/3.jpg')">3</span>
-                            <span class="opsi-angka" onclick="gantiPreview(this, 'Custom/Element/4.jpg')">4</span>
+                            <span class="opsi-angka aktif" onclick="gantiPreviewDinamis(this, 'Element', 1)">1</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Element', 2)">2</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Element', 3)">3</span>
+                            <span class="opsi-angka" onclick="gantiPreviewDinamis(this, 'Element', 4)">4</span>
                         </div>
                     </div>
                 </div>
@@ -586,7 +551,7 @@
 
             <!-- Tombol Kirim Pilihan ke WA Admin -->
             <div style="text-align: center;">
-                <button class="btn-wa-custom" onclick="kirimCustomKeWA()">Kirim Pilihan via WhatsApp 📲</button>
+                <button class="btn-wa-custom" onclick="kirimCustomKeWA()">Kirim Pilihan ke WhatsApp Admin 📲</button>
             </div>
         </div>
 
@@ -595,6 +560,7 @@
             <h2>Momen Bahagia Customer</h2>
         
             <div class="galeri-grid">
+                <!-- Gunakan Emmet atau copy 39 foto galeri Kakak di sini -->
                 <img src="Galeri kinyis kinyis/1.jpeg" alt="">
                 <img src="Galeri kinyis kinyis/2.jpeg" alt="">
                 <img src="Galeri kinyis kinyis/3.jpeg" alt="">
@@ -639,10 +605,10 @@
             <!-- Pesan Ajakan Mengirim Foto (CTA Galeri) -->
             <div style="text-align: center; margin-top: 40px; padding: 30px 20px; background-color: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.03);">
                 <p style="color: #8F7A7E; font-size: 1.1rem; margin-bottom: 25px; font-weight: 500;">
-                    Punya dokumentasi hari special bersama Jiwablooms dan ingin diabadikan? yukk...kirimkan via WhatsApp 😉
+                    Punya dokumentasi hari special bersama Jiwablooms dan ingin diabadikan? yukk...kirimkan ke admin 😉
                 </p>
                 <a href="https://wa.me/6282143058305?text=Halo%20Admin%20Jiwa%20Blooms!%20%F0%9F%8C%B8%0ASaya%20ingin%20mengirimkan%20foto%20dokumentasi%20hari%20spesial%20saya%20bersama%20Jiwa%20Blooms%20untuk%20diabadikan%20di%20Galeri." target="_blank" class="btn-wa-custom" style="margin-top: 0; margin-bottom: 0;">
-                    Kirim Foto 📸
+                    Kirim Foto ke Admin 📸
                 </a>
             </div>
         </div>
@@ -667,74 +633,92 @@
 
     <!-- === JAVASCRIPT UNTUK TAB, PREVIEW GAMBAR, DAN WHATSAPP === -->
     <script>
-    // Fungsi untuk memindahkan tab navigasi
+    // Fungsi Tab Navigasi
     function bukaTab(namaTab, elemenTombol) {
-        // 1. Sembunyikan semua konten tab
         let konten = document.getElementsByClassName("tab-content");
-        for (let i = 0; i < konten.length; i++) {
-            konten[i].classList.remove("active");
-        }
+        for (let i = 0; i < konten.length; i++) konten[i].classList.remove("active");
 
-        // 2. Matikan status aktif pada semua tombol navigasi
         let tombol = document.getElementsByClassName("tab-button");
-        for (let i = 0; i < tombol.length; i++) {
-            tombol[i].classList.remove("active");
-        }
+        for (let i = 0; i < tombol.length; i++) tombol[i].classList.remove("active");
 
-        // 3. Tampilkan tab terpilih & tandai tombolnya sebagai aktif
         document.getElementById(namaTab).classList.add("active");
         elemenTombol.classList.add("active");
     }
 
-    // Fungsi Interaktif untuk mengganti Preview Gambar Custom Design
-    function gantiPreview(elemen, lokasiGambar) {
-        // 1. Mencari bingkai kartu dari angka yang diklik
-        const kartu = elemen.closest('.kartu-produk');
-        
-        // 2. Mengganti gambar utama di kartu tersebut
-        const gambarUtama = kartu.querySelector('img');
-        gambarUtama.src = lokasiGambar;
+    // ----- LOGIKA CERDAS CUSTOM DESIGN ----- //
+    let warnaTerpilih = "Hitam";     // Teks untuk dikirim ke WA
+    let kodeFileWarna = "Hitam";     // Teks penanda nama file (Contoh: "Hitam", "Biru", dll)
 
-        // 3. Menghapus warna 'aktif' dari semua angka di kartu tersebut
-        const semuaAngka = kartu.querySelectorAll('.opsi-angka');
-        semuaAngka.forEach(angka => {
-            angka.classList.remove('aktif');
-        });
+    // Menyimpan memori nomor berapa yang sedang dipilih oleh customer di tiap kategori
+    let memoriOpsi = {
+        'Congrats': 1,
+        'Unof': 1,
+        'Nama': 1,
+        'From': 1,
+        'Element': 1
+    };
 
-        // 4. Memberikan warna 'aktif' ke angka yang baru saja diklik
-        elemen.classList.add('aktif');
-    }
-
-    // ----- VARIABEL PENYIMPAN WARNA (FITUR WA) -----
-    let warnaTerpilih = "Hitam"; // Warna default saat web pertama dibuka
-
-    // ----- FUNGSI UNTUK MEMILIH WARNA (FITUR WA) -----
-    function pilihWarna(elemen, namaWarna) {
-        // Hapus bingkai aktif dari semua warna
+    // Fungsi Saat Warna Diklik
+    function pilihWarna(elemen, namaWarnaTeks, namaFile) {
+        // Hilangkan border aktif dari semua warna
         let semuaWarna = document.getElementById('opsi-warna-font').getElementsByClassName('lingkaran-warna');
-        for (let i = 0; i < semuaWarna.length; i++) {
-            semuaWarna[i].classList.remove('aktif');
-        }
-        // Beri bingkai aktif ke warna yang diklik dan simpan namanya
+        for (let i = 0; i < semuaWarna.length; i++) semuaWarna[i].classList.remove('aktif');
+        
+        // Aktifkan warna yang baru diklik
         elemen.classList.add('aktif');
-        warnaTerpilih = namaWarna;
+        
+        // Simpan data
+        warnaTerpilih = namaWarnaTeks;
+        kodeFileWarna = namaFile;
+
+        // Otomatis ganti gambar di 4 kategori font agar warnanya berubah serentak
+        updateGambarKartu('Congrats');
+        updateGambarKartu('Unof');
+        updateGambarKartu('Nama');
+        updateGambarKartu('From');
+        // 'Element' tidak kita panggil di sini agar gambarnya tetap utuh
     }
 
-    // ----- FUNGSI MERANGKUM & KIRIM KE WHATSAPP -----
+    // Fungsi Saat Angka 1-5 Diklik
+    function gantiPreviewDinamis(elemen, kategori, nomor) {
+        // Warnai angka yang dipilih
+        const kartu = elemen.closest('.kartu-produk');
+        const semuaAngka = kartu.querySelectorAll('.opsi-angka');
+        semuaAngka.forEach(angka => angka.classList.remove('aktif'));
+        elemen.classList.add('aktif');
+
+        // Simpan ke memori lalu ganti gambar
+        memoriOpsi[kategori] = nomor;
+        updateGambarKartu(kategori);
+    }
+
+    // Fungsi Pemasang Nama File Gambar Baru
+    function updateGambarKartu(kategori) {
+        let idKartu = "img-" + kategori;
+        let imgElemen = document.getElementById(idKartu);
+        let nomorTerakhir = memoriOpsi[kategori]; // Cek angka berapa yang sedang dipilih
+
+        // Jika kategorinya Element, cukup panggil nama "1.jpg", "2.jpg" dsb.
+        if (kategori === 'Element') {
+            imgElemen.src = "Custom/Element/" + nomorTerakhir + ".jpg";
+        } else {
+            // Jika font, kombinasikan menjadi "Biru-1.jpg", "Pink-2.jpg" dsb.
+            imgElemen.src = "Custom/" + kategori + "/" + kodeFileWarna + "-" + nomorTerakhir + ".png";
+        }
+    }
+
+    // ----- FUNGSI KIRIM WA -----
     function kirimCustomKeWA() {
-        // Nomor WA Admin (Sudah disesuaikan)
         let noWA = "6282143058305"; 
         
         let pesan = "Halo Admin Jiwa Blooms! 🌸\nSaya ingin order dengan detail Custom Design berikut:\n\n";
         pesan += "🎨 *Warna Font:* " + warnaTerpilih + "\n";
         
-        // Membaca semua kartu di dalam tab custom
         let gridCustom = document.getElementById('custom').querySelector('.katalog-grid');
         let kartuArray = gridCustom.querySelectorAll('.kartu-produk');
         
         kartuArray.forEach(kartu => {
             let namaKategori = kartu.querySelector('h3').innerText;
-            // Cari angka yang sedang memiliki class 'aktif'
             let opsiAktif = kartu.querySelector('.opsi-angka.aktif'); 
             
             if (opsiAktif) {
@@ -743,11 +727,7 @@
         });
         
         pesan += "\nTerima kasih!";
-        
-        // Mengubah teks menjadi format link
         let linkWA = "https://wa.me/" + noWA + "?text=" + encodeURIComponent(pesan);
-        
-        // Membuka WhatsApp di tab baru
         window.open(linkWA, '_blank');
     }
     </script>
